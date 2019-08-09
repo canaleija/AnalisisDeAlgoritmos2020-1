@@ -5,6 +5,8 @@
  */
 package analisisdealgoritmos2020.pkg1;
 
+import ordenamiento.Burbuja;
+
 /**
  *
  * @author CRUZLEIJA
@@ -15,7 +17,10 @@ public class AnalisisDeAlgoritmos20201 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Burbuja  b = new Burbuja();
+        b.definirDatos(new double[]{5,3,2,1});
+        System.out.println(b.ordenarDatos());
+        System.out.println();
     }
     
 }
