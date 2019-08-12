@@ -6,6 +6,7 @@
 package analisisdealgoritmos2020.pkg1;
 
 import ordenamiento.Burbuja;
+import ordenamiento.Herramientas;
 
 /**
  *
@@ -17,10 +18,17 @@ public class AnalisisDeAlgoritmos20201 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        
         Burbuja  b = new Burbuja();
-        b.definirDatos(new double[]{5,3,2,1});
-        System.out.println(b.ordenarDatos());
-        System.out.println();
+        double original [] =  Herramientas.generarArregloAleatorio(50000,500000);
+        for (int i = 0 ; i<20; i++){
+         b.definirDatos(original.clone());
+         System.out.println(i+": "+b.ordenarDatos());
+         System.out.println();
+        }
+       
+        
     }
     
 }
