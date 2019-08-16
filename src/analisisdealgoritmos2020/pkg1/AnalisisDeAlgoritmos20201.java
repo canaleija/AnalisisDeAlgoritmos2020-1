@@ -21,7 +21,9 @@ public class AnalisisDeAlgoritmos20201 {
         
         
         Burbuja  b = new Burbuja();
-        double original [] =  Herramientas.generarArregloAleatorio(50000,500000);
+        double original [] =  Herramientas.generarArregloMejorCaso(20000);
+        //double original2 [] =  Herramientas.generarArregloMejorCaso(20000);
+        
         for (int i = 0 ; i<20; i++){
          b.definirDatos(original.clone());
          System.out.println(i+": "+b.ordenarDatos());
