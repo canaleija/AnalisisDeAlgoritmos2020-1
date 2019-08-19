@@ -5,8 +5,12 @@
  */
 package analisisdealgoritmos2020.pkg1;
 
+import java.util.ArrayList;
+import ordenamiento.AlgoritmoOrdenamiento;
 import ordenamiento.Burbuja;
+import ordenamiento.Grafica;
 import ordenamiento.Herramientas;
+import ordenamiento.Manager;
 
 /**
  *
@@ -21,14 +25,17 @@ public class AnalisisDeAlgoritmos20201 {
         
         
         Burbuja  b = new Burbuja();
-        double original [] =  Herramientas.generarArregloMejorCaso(20000);
-        //double original2 [] =  Herramientas.generarArregloMejorCaso(20000);
+        Burbuja  b1 = new Burbuja();
+        Burbuja  b2 = new Burbuja();
         
-        for (int i = 0 ; i<20; i++){
-         b.definirDatos(original.clone());
-         System.out.println(i+": "+b.ordenarDatos());
-         System.out.println();
-        }
+        ArrayList<AlgoritmoOrdenamiento> lista = new ArrayList<>();
+        lista.add(b);
+        lista.add(b1);
+        lista.add(b2);
+       
+        Manager m = new Manager(lista);
+        m.ejecutarPrueba(2000, 3, 500, true);
+        
        
         
     }
