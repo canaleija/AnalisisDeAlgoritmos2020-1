@@ -27,7 +27,8 @@ public class Manager {
         // recorremos la lista de algoritmos
         for(AlgoritmoOrdenamiento a:this.metodos){
             a.definirDatos(datos.clone());
-            tiempos[p] = a.ordenarDatos();
+            a.ordenarDatos();
+            tiempos[p] = a.getTt();
             System.out.println(tiempos[p]);
             p++;                 
         }
@@ -44,17 +45,18 @@ public class Manager {
         for(int j = 0; j<this.metodos.size();j++)
             tiemposTotales.add(new Double[pruebas]);
         
-        tiemposTotales.add(new Double[pruebas]);
+        //tiemposTotales.add(new Double[pruebas]);
         
         for(int p=0;p<pruebas;p++){
             double[] datos = Herramientas.generarArregloAleatorio(p*rAumento,rAleatorio);
             for(int a=0;a<this.metodos.size();a++){
                 AlgoritmoOrdenamiento aux = this.metodos.get(a);
                 aux.definirDatos(datos.clone());
-                tiemposTotales.get(a)[p]=aux.ordenarDatos();
+                aux.ordenarDatos();
+                tiemposTotales.get(a)[p]=aux.getTt();
                 
             }
-            tiemposTotales.get(tiemposTotales.size()-1)[p]=Math.pow(p, 2);
+           // tiemposTotales.get(tiemposTotales.size()-1)[p]=Math.pow(p, 2);
             System.out.println(p);
         }
         

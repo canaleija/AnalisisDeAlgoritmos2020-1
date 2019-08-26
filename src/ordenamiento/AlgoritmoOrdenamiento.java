@@ -9,8 +9,10 @@ package ordenamiento;
  *
  * @author CRUZLEIJA
  */
-public interface AlgoritmoOrdenamiento {
+public interface AlgoritmoOrdenamiento{
         
     void definirDatos (double[] arreglo);
-    double ordenarDatos();
+    void ordenarDatos();
+    double getTt();
+    
 }

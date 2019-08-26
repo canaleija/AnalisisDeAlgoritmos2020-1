@@ -24,9 +24,9 @@ public class AnalisisDeAlgoritmos20201 {
     public static void main(String[] args) {
         
         
-        Burbuja  b = new Burbuja();
-        Burbuja  b1 = new Burbuja();
-        Burbuja  b2 = new Burbuja();
+        Burbuja  b = new Burbuja(true);
+        Burbuja  b1 = new Burbuja(true);
+        Burbuja  b2 = new Burbuja(true);
         
         ArrayList<AlgoritmoOrdenamiento> lista = new ArrayList<>();
         lista.add(b);
